@@ -1,0 +1,25 @@
+@import "../sass/variables";
+
+.project_list_card {
+    // border: 3px solid;
+    // border-image: linear-gradient(to right, #30cfd0 0%, #330867 100%) 1;
+    border-radius: 10px;
+    background: $backgroundRoot;
+    color: #fff;
+    margin: 2em 4em;
+    min-width: 240px;
+    transition: all 0.3s linear;
+    // box-shadow: 7px 8px 8px #0000009c;
+    cursor: pointer;
+    &:hover {
+        box-shadow: 0px 10px 8px 0px #0000009c;
+        transform: translateY(-10px);
+    }
+    &--Thumbnail {
+        width: 15em;
+        border-radius: 10px 10px 0 0;
+    }
+    p {
+        margin: 1em;
+    }
+}

@@ -1,0 +1,27 @@
+.projects {
+	display: flex;
+	flex-direction: column;
+	h2 {
+		margin-bottom: 5em;
+	}
+	.projects_list {
+		// width: 80%;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		background-color: rgba(0, 0, 0, 0.274);
+		padding: 2em 0;
+		border-radius: 10px;
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	.projects .projects_list {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (max-width: 737px) {
+	.projects .projects_list {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
