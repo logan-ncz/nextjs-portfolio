@@ -16,47 +16,51 @@
     visibility: hidden;
     transition: all 0.5s linear;
 
-    &[data-openPopin="true"] {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    &_close {
-        position: relative;
-        left: 97.5%;
-        height: 2em;
-        cursor: pointer;
-    }
-
-    &_left {
-        &--thumbnail {
-            width: 90%;
-            object-fit: contain;
-        }
-        .logoStackImg {
-            margin-top: 1em;
-        }
-    }
-
-    @media screen and (min-width: 551px) {
-        justify-content: space-between;
-        &_left, aside {
-            width: 50%;
-        }
-        &_left--thumbnail {
-            margin-top: 3em;
-        }
-    }
-
     @media screen and (max-width: 551px) {
         flex-direction: column;
         padding: 0;
         left: 0;
         width: 100vw;
-        &_close {
+
+        .projects_popinDetail_close {
             left: 92%;
             top: 1%;
         }
     }
+    @media screen and (min-width: 551px) {
+        justify-content: space-between;
+        
+        .projects_popinDetail_left, aside {
+            width: 50%;
+        }
+    
+        .projects_popinDetail_left--thumbnail {
+            margin-top: 3em;
+        }
+    }
 }
+
+.projects_popinDetail[data-openPopin="true"] {
+    opacity: 1;
+    visibility: visible;
+}
+
+.projects_popinDetail_close {
+    position: relative;
+    left: 97.5%;
+    height: 2em;
+    cursor: pointer;
+}
+
+.projects_popinDetail_left {
+    .projects_popinDetail--thumbnail {
+        width: 90%;
+        object-fit: contain;
+    }
+
+    .logoStackImg {
+        margin-top: 1em;
+    }
+}
+
 

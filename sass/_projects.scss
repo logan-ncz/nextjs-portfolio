@@ -1,17 +1,18 @@
-.projects {
+.projects-list {
 	display: flex;
 	flex-direction: column;
+
 	h2 {
 		margin-bottom: 5em;
 	}
-	.projects_list {
-		// width: 80%;
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		background-color: rgba(0, 0, 0, 0.274);
-		padding: 2em 0;
-		border-radius: 10px;
-	}
+}
+
+.projects-list__content {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	background-color: rgba(0, 0, 0, 0.274);
+	padding: 2em 0;
+	border-radius: 10px;
 }
 
 @media screen and (max-width: 1100px) {
