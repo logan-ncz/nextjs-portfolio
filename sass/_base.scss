@@ -46,8 +46,9 @@ a {
 	position: relative;
 	width: 100%;
 	height: 100%;
-	background-image: $backgroundRoot;
-	background-attachment: fixed;
+	// background-image: $backgroundRoot;
+	// background-attachment: fixed;
+	background-color: #212121;
 }
 main {
 	display: flex;
