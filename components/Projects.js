@@ -1,8 +1,6 @@
+import "../sass/_projects.scss";
 import ProjectCard from "./Projects/ProjectCard.js";
 import { projects } from "../data/projects.js";
-// import PopinProjectDetail from "./Projects/PopinProjectDetail.js";
-
-import "../sass/_projects.scss";
 
 function Projects() {
   return (
@@ -13,7 +11,6 @@ function Projects() {
           return (<ProjectCard project={project} key={project.id} />);
         })}
       </div>
-      {/* <PopinProjectDetail /> */}
     </section>
   );
 }

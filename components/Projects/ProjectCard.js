@@ -1,8 +1,5 @@
-// import { useDispatch } from "react-redux";
-// import { setOpenPopin, setProjectSelected } from "../../store/reducers";
-import Image from "next/image";
-
 import "../../sass/_projectCard.scss";
+import Image from "next/image";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -16,18 +13,10 @@ import NewLogoStack from "../NewLogoStack";
  * @returns 
  */
 function ProjectCard({ project }) {
-  const [ hover, setHover ] = useState(true);
-
-  // const dispatch = useDispatch();
-
-  // function pushPopinData() {
-  //   dispatch(setProjectSelected(project));
-  //   dispatch(setOpenPopin(true));
-  // }
 
   return (
     <div className="project-card" id={project.title} >
-      <div className="project-card__top" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+      <div className="project-card__top">
         <Image
           className="project-card__img"
           src={require("../../assets/projectThumbnails/" + project.thumbnail + ".jpg")}
@@ -35,21 +24,21 @@ function ProjectCard({ project }) {
           width={240}
           height={135}
         />
-        {hover && (
           <div className="project-card__hover">
             <p>{project.title}</p>
             <div className="project-card__hover__logos">
               {project.stack.map((logo) => {
                 return (
-                  <NewLogoStack logo={logo} />
+                  <div key={project.title + logo}>
+                    <NewLogoStack logo={logo} />
+                  </div>
                 )
               })}
             </div>
           </div>
-        )}
       </div>
       <div className="project-card__bottom">
-        <Link href={project.githubpages} className=""><FontAwesomeIcon icon={faGithub} /></Link>
+        <a href={project.githubRepository} target="_blank" className=""><FontAwesomeIcon icon={faGithub} /></a>
       </div>
     </div>
   );

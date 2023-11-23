@@ -34,6 +34,8 @@
 
 .project-card__hover {
     @include d-flex-center(center, center);
+    visibility: hidden;
+    opacity: 0;
     flex-direction: column;
     position: absolute;
     top: 0%;
@@ -42,6 +44,11 @@
     height: 100%;
     background-color: #0000008c;
     border-radius: 10px 10px 0 0;
+    transition: all 0.25s ease-out;
+    .project-card__top:hover & {
+        visibility: visible;
+        opacity: 1;
+    }
 }
 
 .project-card__hover__logos {
