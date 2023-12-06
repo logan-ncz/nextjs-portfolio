@@ -24,7 +24,7 @@
 
 .project-card__top {
     position: relative;
-    @include d-flex-center(center, center);
+    @include d-flex;
 }
 
 .project-card__img {
@@ -33,7 +33,7 @@
 }
 
 .project-card__hover {
-    @include d-flex-center(center, center);
+    @include d-flex;
     visibility: hidden;
     opacity: 0;
     flex-direction: column;
@@ -52,12 +52,12 @@
 }
 
 .project-card__hover__logos {
-    @include d-flex-center(center, center);
+    @include d-flex;
     gap: 1rem
 }
 
 .project-card__bottom {
-    @include d-flex-center(center, center);
+    @include d-flex;
     height: 3em;
 
     .fa-github {

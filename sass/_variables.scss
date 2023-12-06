@@ -1,6 +1,11 @@
-$colorPrincipaly: #30d0d0;
+// $colorPrincipaly: #30d0d0;
+$colorPrincipaly: #d0c030;
 $colorSecondary: #330867;
 $scrollBarBackground: $colorSecondary;
 $scrollBarThumb: $colorPrincipaly;
 $scrollBarThumbHover: #229191;
-$backgroundRoot: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+// $backgroundRoot: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+$backgroundRoot: linear-gradient(to top, #d0c030 0%, #330867 100%);
+$background: #212121;
+
+$borderLayout: $colorPrincipaly solid 2px;
