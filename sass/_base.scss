@@ -56,12 +56,14 @@ main {
 	align-items: center;
 }
 .main {
+	margin: 2em;
 	color: #fff;
 	text-align: center;
 	.mainBio {
 		// margin-top: 12rem;
 		display: flex;
 		align-items: center;
+		min-height: 89vh;
 		.mainBioContent {
 			display: flex;
 			text-align: left;
@@ -69,7 +71,9 @@ main {
 			background-color: rgba(0, 0, 0, 0.274);
 			margin: 0 1em;
 			padding: 2em;
+			border: $borderLayout;
 			border-radius: 10px;
+			
 			&_left {
 				margin-right: 2em;
 				&_Photo {
@@ -77,7 +81,7 @@ main {
 				}
 			}
 			h1::first-letter {
-				border-bottom: 2px solid $colorPrincipaly;
+				border-bottom: $borderLayout;
 				transition: 2s all border-bottom;
 			}
 

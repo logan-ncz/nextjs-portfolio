@@ -1,6 +1,13 @@
+@import "../sass/variables";
+@import "../sass/mixins";
+
 footer {
-    position: absolute;
+    @include d-flex;
+    // position: absolute;
     bottom: 0;
     width: 100vw;
     margin-top: auto;
+    background-color: $background;
+    color: #fff;
+    border-top: $borderLayout;
 }
