@@ -4,11 +4,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // background: #331970;
-  
   color: #fff;
-  border-bottom: $colorPrincipaly solid 2px;
-  position: fixed;
+  border-bottom: $borderLayout;
   width: 100vw;
 
   ul {
