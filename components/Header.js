@@ -5,7 +5,7 @@ function Header() {
     <header className="header">
       <ul>
         <li className="headerLogo">
-          <a href="#root">Logan Nochez</a>
+          <a href="#root">Logan</a>
         </li>
 
         {/* <li>

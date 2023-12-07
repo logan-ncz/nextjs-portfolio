@@ -16,8 +16,8 @@ function Bio() {
 					<Image src={Photo} className="mainBioContent_left_Photo" alt="" width={200} height={200} quality={80} />
 				</div>
 				<div className="mainBioContent_infos">
-					<h1>Logan Nochez</h1>
-					<h2>Développeur Front-End</h2>
+					<h1>Logan Nochez--Delacroix</h1>
+					<h2>Développeur Front-End React.js</h2>
 					<p>
 						<strong>
 							Passionné de développement web, je suis en quête de
