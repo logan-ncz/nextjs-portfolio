@@ -10,18 +10,15 @@ import "../sass/_base.scss";
 const siteTitle = "Logan Portfolio with Nextjs";
 
 export default function Home() {
-	return (
-		<div id="root" className="background">
-			<Head>
-				<title>{siteTitle}</title>
-			</Head>
-			<Header />
-			<main className="main">
-				<Bio />
-				{/* <About /> */}
-				<Projects />
-			</main>
-			<Footer />
-		</div>
+	return (<>
+		<Head>
+			<title>{siteTitle}</title>
+		</Head>
+		<main className="main">
+			<Bio />
+			{/* <About /> */}
+			<Projects />
+		</main>
+	</>
 	);
 }

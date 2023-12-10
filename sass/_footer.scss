@@ -3,9 +3,9 @@
 
 footer {
     @include d-flex;
-    // position: absolute;
+    position: absolute;
     bottom: 0;
-    width: 99vw;
+    width: 100vw;
     margin-top: auto;
     background-color: $background;
     color: #fff;
