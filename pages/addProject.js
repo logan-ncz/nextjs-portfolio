@@ -1,8 +1,7 @@
 import Head from "next/head";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
 
 import "../sass/_base.scss";
+import FormAddProject from "../components/FormAddProject";
 
 const siteTitle = "Add a project"
 
@@ -11,6 +10,7 @@ export default function AddProject() {
         <Head>
 			<title>{siteTitle}</title>
 		</Head>
-    
+
+        <FormAddProject />
     </div>)
 }

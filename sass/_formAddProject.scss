@@ -1,0 +1,10 @@
+@import "./mixins";
+
+.form-add-project {
+    @include d-flex;
+    flex-direction: column;
+    color: #fff;
+
+    .form-group {
+    }
+}
