@@ -3,32 +3,17 @@ import Head from "next/head";
 import "../sass/_base.scss";
 // pages/blog.js
 import { loadProjects } from '../lib/loadProjects'
+import TableProjects from "../components/TableProjects";
 
 const siteTitle = "List of projects on DB";
 
 export default function ProjectsList({ projects }) {
 
-    console.log(projects);
-
-    return(<div className="ProjectsList">
+    return(<div className="projectsList">
         <Head>
 			<title>{siteTitle}</title>
 		</Head>
-        <table>
-            <tbody>
-                <th>
-                    <td>Id</td>
-                    <td>Title</td>
-                </th>
-
-                {projects.map((project) => {
-                    return (<tr>
-                        <td>{project.id}</td>
-                        <td>{project.title}</td>
-                    </tr>)
-                })}
-            </tbody>
-        </table>
+        <TableProjects projects={projects} />
     </div>)
 }
  
