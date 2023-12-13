@@ -7,25 +7,26 @@ import "../sass/_formAddProject.scss";
  */
 export default function FormAddProject() {
     return (
-        <form className="form-add-project">
-            <h2>Add a project to DB</h2>
+        <form action="" className="form-add-project">
+            <h2>Ajouter un projet à la liste</h2>
             <fieldset>
                 <div className="form-group">
-                    <label htmlFor="title">Title</label>
+                    <label htmlFor="title">Titre : </label>
                     <input name="title" />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="title">Github Pages</label>
-                    <input name="title" />
+                    <label htmlFor="githubpages">Github Pages : </label>
+                    <input name="githubpages" />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="title">Github Repository</label>
-                    <input name="title" />
+                    <label htmlFor="githubrepository">Github Repository : </label>
+                    <input name="githubrepository" />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="title">Thumbnail</label>
-                    <input name="title" />
+                    <label htmlFor="thumbnail">Miniature : </label>
+                    <input name="thumbnail" />
                 </div>
+                <button type="submit">Valider</button>
             </fieldset>
         </form>
     )
