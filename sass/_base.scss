@@ -51,53 +51,16 @@ a {
 	// background-attachment: fixed;
 	background-color: #212121;
 }
-main {
+.main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-}
-.main {
-	margin: 2em;
+	margin: 0 2em;
+	padding: 2em 0;
 	color: #fff;
 	text-align: center;
-	.mainBio {
-		// margin-top: 12rem;
-		display: flex;
-		align-items: center;
-		min-height: 89vh;
-		.mainBioContent {
-			display: flex;
-			text-align: left;
-			align-items: center;
-			background-color: rgba(0, 0, 0, 0.274);
-			margin: 0 1em 8em;
-			padding: 2em;
-			border: $borderLayout;
-			border-radius: 10px;
-			
-			&_left {
-				margin-right: 2em;
-				&_Photo {
-					border-radius: 100%;
-				}
-			}
-			h1::first-letter {
-				border-bottom: $borderLayout;
-				transition: 2s all border-bottom;
-			}
-
-			h2 {
-				font-size: 16px;
-				margin-top: -1em;
-				font-weight: 400;
-			}
-
-			a {
-				color: #fff;
-			}
-		}
-	}
-	section {
+	
+	section:not(.mainBio) {
 		min-height: 100vh;
 		&.projects {
 			min-height: 107vh;
@@ -110,6 +73,45 @@ main {
 		svg {
 			font-size: 1.5rem;
 		}
+	}
+}
+
+.mainBio {
+	// margin-top: 12rem;
+	display: flex;
+	align-items: center;
+	min-height: 89vh;
+}
+
+.mainBioContent {
+	display: flex;
+	text-align: left;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.274);
+	margin: 0 8em;
+	padding: 2em;
+	border: $borderLayout;
+	border-radius: 10px;
+	
+	&_left {
+		margin-right: 2em;
+		&_Photo {
+			border-radius: 100%;
+		}
+	}
+	h1::first-letter {
+		border-bottom: $borderLayout;
+		transition: 2s all border-bottom;
+	}
+
+	h2 {
+		font-size: 16px;
+		margin-top: -1em;
+		font-weight: 400;
+	}
+
+	a {
+		color: #fff;
 	}
 }
 
@@ -127,5 +129,6 @@ main {
 @media screen and (max-width: 551px) {
 	.mainBioContent {
 		flex-direction: column;
+		margin: 1em 8em;
 	}
 }
