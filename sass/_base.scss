@@ -1,5 +1,5 @@
-@import "./variables";
-@import "./mixins";
+@use "./variables" as *;
+@use "./mixins" as *;
 
 * {
 	font-family: "Segoe UI", sans-serif;
@@ -10,26 +10,33 @@ html {
 }
 
 body {
-	margin: 0;
+	margin: auto;
 	padding: 0;
 	box-sizing: border-box;
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	max-width: 1200px;
+	// background-image: $backgroundRoot;
+	// background-attachment: fixed;
+	background-color: $background;
 }
 
 /* width */
-// *::-webkit-scrollbar {
-//   width: 16px;
-//   background: $scrollBarBackground;
+*::-webkit-scrollbar {
+	width: 16px;
+	background: $scrollBarBackground;
 
-//   &-thumb {
-//     background: $scrollBarThumb;
-//     border-radius: 10px;
-//     border: 3px solid $scrollBarBackground;
+	&-thumb {
+		background: $scrollBarThumb;
+		border-radius: 10px;
+		border: 3px solid $scrollBarBackground;
 
-//     &:hover {
-//       background: $scrollBarThumbHover;
-//     }
-//   }
-// }
+		&:hover {
+			background: $scrollBarThumbHover;
+		}
+	}
+}
 
 @keyframes loader {
 	100% {
@@ -43,14 +50,6 @@ a {
 	text-decoration: none;
 }
 
-.background {
-	position: relative;
-	width: 100%;
-	min-height: 100vh;
-	// background-image: $backgroundRoot;
-	// background-attachment: fixed;
-	background-color: #212121;
-}
 .main {
 	display: flex;
 	flex-direction: column;
@@ -59,13 +58,13 @@ a {
 	padding: 2em 0;
 	color: #fff;
 	text-align: center;
-	
-	section:not(.mainBio) {
-		min-height: 100vh;
-		&.projects {
-			min-height: 107vh;
-		}
-	}
+
+	// section:not(.mainBio) {
+	// 	min-height: 100vh;
+	// 	&.projects {
+	// 		min-height: 107vh;
+	// 	}
+	// }
 
 	&SocialLinks a {
 		margin-right: 1em;
@@ -77,28 +76,22 @@ a {
 }
 
 .mainBio {
-	// margin-top: 12rem;
 	display: flex;
 	align-items: center;
-	min-height: 89vh;
+	// min-height: 89vh;
 }
 
 .mainBioContent {
 	display: flex;
-	text-align: left;
 	align-items: center;
-	background-color: rgba(0, 0, 0, 0.274);
-	margin: 0 8em;
+	text-align: left;
+	background-color: lighten($background, 2%);
+	margin: 0 auto;
 	padding: 2em;
 	border: $borderLayout;
 	border-radius: 10px;
-	
-	&_left {
-		margin-right: 2em;
-		&_Photo {
-			border-radius: 100%;
-		}
-	}
+	width: 90%;
+
 	h1::first-letter {
 		border-bottom: $borderLayout;
 		transition: 2s all border-bottom;
@@ -115,6 +108,21 @@ a {
 	}
 }
 
+.mainBioContent_infos h1 {
+	margin-top: 0;
+}
+
+.mainBioContent_left {
+	margin-right: 2em;
+}
+
+.mainBioContent_left_Photo {
+	border-radius: 100%;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
 .projectsList {
 	@include d-flex;
 	color: #fff;
@@ -129,6 +137,6 @@ a {
 @media screen and (max-width: 551px) {
 	.mainBioContent {
 		flex-direction: column;
-		margin: 1em 8em;
+		width: 100%;
 	}
 }

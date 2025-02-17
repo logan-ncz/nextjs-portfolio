@@ -1,66 +1,65 @@
-@import "../sass/variables";
+@use "../sass/variables" as *;
 
 .projects_popinDetail {
-    display: flex;
-    // background-color: #084e67c9;
-    background-image: $backgroundRoot;
-    position: fixed;
-    top: 14%;
-    left: 16%;
-    width: 66vw;
-    height: 65vh;
-    border-radius: 16px;
-    padding: 1rem;
-    box-shadow: 7px 8px 8px #0000009c;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.5s linear;
+	display: flex;
+	// background-color: #084e67c9;
+	background-image: $backgroundRoot;
+	position: fixed;
+	top: 14%;
+	left: 16%;
+	width: 66vw;
+	height: 65vh;
+	border-radius: 16px;
+	padding: 1rem;
+	box-shadow: 7px 8px 8px #0000009c;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s linear;
 
-    @media screen and (max-width: 551px) {
-        flex-direction: column;
-        padding: 0;
-        left: 0;
-        width: 100vw;
+	@media screen and (max-width: 551px) {
+		flex-direction: column;
+		padding: 0;
+		left: 0;
+		width: 100vw;
 
-        .projects_popinDetail_close {
-            left: 92%;
-            top: 1%;
-        }
-    }
-    @media screen and (min-width: 551px) {
-        justify-content: space-between;
-        
-        .projects_popinDetail_left, aside {
-            width: 50%;
-        }
-    
-        .projects_popinDetail_left--thumbnail {
-            margin-top: 3em;
-        }
-    }
+		.projects_popinDetail_close {
+			left: 92%;
+			top: 1%;
+		}
+	}
+	@media screen and (min-width: 551px) {
+		justify-content: space-between;
+
+		.projects_popinDetail_left,
+		aside {
+			width: 50%;
+		}
+
+		.projects_popinDetail_left--thumbnail {
+			margin-top: 3em;
+		}
+	}
 }
 
 .projects_popinDetail[data-openPopin="true"] {
-    opacity: 1;
-    visibility: visible;
+	opacity: 1;
+	visibility: visible;
 }
 
 .projects_popinDetail_close {
-    position: relative;
-    left: 97.5%;
-    height: 2em;
-    cursor: pointer;
+	position: relative;
+	left: 97.5%;
+	height: 2em;
+	cursor: pointer;
 }
 
 .projects_popinDetail_left {
-    .projects_popinDetail--thumbnail {
-        width: 90%;
-        object-fit: contain;
-    }
+	.projects_popinDetail--thumbnail {
+		width: 90%;
+		object-fit: contain;
+	}
 
-    .logoStackImg {
-        margin-top: 1em;
-    }
+	.logoStackImg {
+		margin-top: 1em;
+	}
 }
-
-
